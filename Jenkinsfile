@@ -7,7 +7,7 @@ pipeline {
                 script {
                     def scmVars = checkout([
                         $class: 'GitSCM',
-                        branches: [[name: 'test']],
+                        branches: [[name: 'main']],
                         doGenerateSubmoduleConfigurations: false,
                         extensions: [
                             [$class: 'CloneOption', noTags: false, reference: '', shallow: false],
