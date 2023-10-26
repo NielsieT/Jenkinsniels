@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deploy to test') {
             steps {
-                sh 'sshpass -p student scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/multibranchpipeline_test/index.html student@192.168.29.63:/var/www/html/'
+                sh 'sshpass -p student scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/multibranchpipeline1_test/index.html student@192.168.29.63:/var/www/html/'
             }
         }
                 stage('Confirm test server') {
@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Deploy to Product') {
             steps {
-                sh 'sshpass -p student scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/multibranchpipeline_test/index.html student@192.168.29.64:/var/www/html/'
+                sh 'sshpass -p student scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/multibranchpipeline1_test/index.html student@192.168.29.64:/var/www/html/'
             }
         }
     }
